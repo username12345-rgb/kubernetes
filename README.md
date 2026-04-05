@@ -15,7 +15,7 @@
 
 ### Сборка образов
 `docker build -t flask-app:latest ./flask-app`  
-`docker build -t mysql-db:latest ./mysql-db`
+`docker build -t mysql:8.0 ./mysql-db`
 
 ### Развертывание в Kubernetes
 `kubectl apply -f k8s-config.yaml`
@@ -34,13 +34,13 @@
 `minikube service flask-service --url`
 
 ### Очистка образов
-`docker rmi flask-app:latest mysql-db:latest`
+`docker rmi flask-app:latest mysql:8.0`
 
 ## Быстрый запуск
 
 1. Запустить кластер: `minikube start --driver=docker
 2. Подключить Docker к Minikube: `eval $(minikube docker-env)`
-3. Собрать образы: `docker build -t flask-app:latest ./flask-app && docker build -t mysql-db:latest ./mysql-db`
+3. Собрать образы: `docker build -t flask-app:latest ./flask-app && docker build -t mysql:8.0 ./mysql-db`
 4. Развернуть приложение: `kubectl apply -f k8s-config.yaml`
 5. Дождаться статуса `Running` у обоих подов: `kubectl get pods -w`
 6. Открыть в браузере: `minikube service flask-service --url`
