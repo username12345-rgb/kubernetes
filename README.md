@@ -38,7 +38,7 @@
 
 ## Быстрый запуск
 
-1. Запустить кластер: `minikube start --driver=docker
+1. Запустить кластер: `minikube start --driver=docker` 
 2. Подключить Docker к Minikube: `eval $(minikube docker-env)`
 3. Собрать образы: `docker build -t flask-app:latest ./flask-app && docker build -t mysql:8.0 ./mysql-db`
 4. Развернуть приложение: `kubectl apply -f k8s-config.yaml`
