@@ -15,7 +15,7 @@
 
 ### Сборка образов
 `docker build -t flask-app:latest ./flask-app`  
-`docker build -t mysql:8.0 ./mysql-db`
+`docker build -t mysql-db:latest ./mysql-db`
 
 ### Развертывание в Kubernetes
 `kubectl apply -f k8s-config.yaml`
