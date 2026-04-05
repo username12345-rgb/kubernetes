@@ -4,7 +4,7 @@
 ## Команды консоли
 
 ### Управление кластером
-`minikube start --driver=docker
+`minikube start --driver=docker`
 `minikube stop`  
 `minikube delete --all --purge`
 
